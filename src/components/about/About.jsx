@@ -1,21 +1,35 @@
 import React from 'react'
+import propTypes from 'prop-types'
+import Link from '../link/Link'
 
-const About = () => {
+const About = ({ title, description, color, image, imageRight }) => {
   return (
-    <section>
-      <div>
-        <h2>Transform your brand</h2>
-        <p>
-          We are a full-service creative agency specializing in helping brands
-          grow fast. Engage your clients through compelling visuals that do most
-          of the marketing for you.
-        </p>
-
-        <a href='#'>Learn More</a>
+    <section className='flex flex-wrap flex-col md:flex-row'>
+      <div className={`flex-[1_1_50%] ${imageRight && 'md:order-1'}`}>
+        <img src={image} alt='egg' className='w-full' />
       </div>
-      <div>{/* image here */}</div>
+      <div className='p-9 xl:p-28 flex-[1_1_50%] flex justify-center flex-col items-center'>
+        <div className='w-full text-center md:text-left'>
+          <h2 className='font-serif text-3xl text-dark-blue lg:max-w-[22rem] font-black pb-6'>
+            {title}
+          </h2>
+        </div>
+
+        <p className='text-center md:text-left text-gray pb-6'>{description}</p>
+
+        <div className='w-full text-center md:text-left'>
+          <Link color={color} />
+        </div>
+      </div>
     </section>
   )
 }
 
 export default About
+About.propTypes = {
+  title: propTypes.string,
+  description: propTypes.string,
+  color: propTypes.string,
+  image: propTypes.string,
+  imageRight: propTypes.bool,
+}
