@@ -1,0 +1,13 @@
+.hero {
+  background: hsl(200deg 100% 62%) url('../../images/mobile/image-header.jpg')
+    center center;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background: hsl(200deg 100% 62%)
+      url('../../images/desktop/image-header.jpg') center center;
+    background-size: cover;
+  }
+}
