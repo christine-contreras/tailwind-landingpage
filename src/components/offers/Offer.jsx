@@ -2,7 +2,8 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import propTypes from 'prop-types'
 
-const Offer = ({ imageMobile, imageDesktop, title, description, color }) => {
+const Offer = ({ section }) => {
+  const { imageMobile, imageDesktop, title, description, color } = section
   const [width, setWidth] = useState(window.innerWidth)
   const handleWindowSizeChange = () => {
     setWidth(window.innerWidth)
@@ -40,9 +41,5 @@ const Offer = ({ imageMobile, imageDesktop, title, description, color }) => {
 export default Offer
 
 Offer.propTypes = {
-  imageMobile: propTypes.string,
-  imageDesktop: propTypes.string,
-  title: propTypes.string,
-  description: propTypes.string,
-  color: propTypes.string,
+  section: propTypes.object,
 }

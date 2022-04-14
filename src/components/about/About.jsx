@@ -2,7 +2,8 @@ import React from 'react'
 import propTypes from 'prop-types'
 import Link from '../link/Link'
 
-const About = ({ title, description, color, image, imageRight }) => {
+const About = ({ section }) => {
+  const { title, description, color, image, imageRight } = section
   return (
     <section className='flex flex-wrap flex-col md:flex-row'>
       <div className={`flex-[1_1_50%] ${imageRight && 'md:order-1'}`}>
@@ -27,9 +28,5 @@ const About = ({ title, description, color, image, imageRight }) => {
 
 export default About
 About.propTypes = {
-  title: propTypes.string,
-  description: propTypes.string,
-  color: propTypes.string,
-  image: propTypes.string,
-  imageRight: propTypes.bool,
+  section: propTypes.object,
 }
