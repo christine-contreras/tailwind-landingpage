@@ -4,6 +4,9 @@ import graphicDesignImageDesktop from '../images/desktop/image-graphic-design.jp
 import graphicDesignImageMobile from '../images/mobile/image-graphic-design.jpg'
 import photographyImageDesktop from '../images/desktop/image-photography.jpg'
 import photographyImageMobile from '../images/mobile/image-photography.jpg'
+import emilyImage from '../images/testimonals/image-emily.jpg'
+import jennieImage from '../images/testimonals/image-jennie.jpg'
+import thomasImage from '../images/testimonals/image-thomas.jpg'
 
 export const aboutSections = [
   {
@@ -40,5 +43,29 @@ export const offerSections = [
     color: 'blue',
     imageMobile: photographyImageMobile,
     imageDesktop: photographyImageDesktop,
+  },
+]
+
+export const testimonials = [
+  {
+    quote:
+      'We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.',
+    name: 'Emily R.',
+    jobTitle: 'Marketing Director',
+    image: emilyImage,
+  },
+  {
+    quote:
+      "Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience.",
+    name: 'Thomas S.',
+    jobTitle: 'Chief Operating Officer',
+    image: thomasImage,
+  },
+  {
+    quote:
+      'Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!',
+    name: 'Jennie F.',
+    jobTitle: 'Business Owner',
+    image: jennieImage,
   },
 ]
