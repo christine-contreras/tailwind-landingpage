@@ -1,7 +1,12 @@
 import React from 'react'
+import FooterGallery from '../components/gallery/FooterGallery'
 
 const Footer = () => {
-  return <div>Footer</div>
+  return (
+    <footer>
+      <FooterGallery />
+    </footer>
+  )
 }
 
 export default Footer
