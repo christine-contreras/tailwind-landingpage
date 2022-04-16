@@ -1,0 +1,10 @@
+.menu-mobile::before {
+  content: '';
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: -30px;
+  right: 0;
+  border-bottom: 30px solid #fff;
+  border-left: 30px solid transparent;
+}
