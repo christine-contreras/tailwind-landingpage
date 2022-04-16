@@ -3,9 +3,9 @@ import Testimonial from '../components/testimonial/Testimonial'
 import { testimonials } from '../utils/data'
 const Testimonials = () => {
   return (
-    <article className='pt-10 pb-10 pr-4 pl-4'>
+    <article className='pt-10 pb-10 pr-4 pl-4  xl:p-28'>
       <header className='text-center m-auto'>
-        <h2 className='m-auto text-xl text-light-gray tracking-widest uppercase font-serif'>
+        <h2 className='m-auto text-xl text-light-gray tracking-widest uppercase font-serif xl:pb-8'>
           Client Testimonials
         </h2>
       </header>

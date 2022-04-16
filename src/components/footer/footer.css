@@ -1,0 +1,7 @@
+.link-social svg {
+  fill: #2c7566;
+}
+
+.link-social:hover svg {
+  fill: hsl(0, 0%, 100%);
+}

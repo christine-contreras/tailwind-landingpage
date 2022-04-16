@@ -103,3 +103,5 @@ export const galleryImages = [
     mobile: gallery4Mobile,
   },
 ]
+
+export const navItems = ['About', 'Services', 'Projects']
