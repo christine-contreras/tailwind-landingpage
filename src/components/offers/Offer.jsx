@@ -19,6 +19,8 @@ const Offer = ({ section }) => {
 
   const isMobile = width <= 1024
 
+  const textColor = color === 'blue' ? 'text-blue' : 'text-dark-green'
+
   return (
     <section className='flex-[1_1_50%] grid grid-cols-2 grid-rows-3 xl:grid-cols-5 xl:grid-rows-5'>
       <img
@@ -29,17 +31,10 @@ const Offer = ({ section }) => {
 
       <div className='text-center col-span-full row-start-3 row-span-2 xl:col-start-2 xl:col-span-3 xl:row-start-4 xl:row-span-2'>
         <h2
-          className={`font-serif text-3xl xl:max-w-[22rem] font-black m-auto ${
-            color === 'blue' && 'text-blue'
-          } ${color === 'dark-green' && 'text-dark-green'}`}>
+          className={`font-serif text-3xl xl:max-w-[22rem] font-black m-auto ${textColor}`}>
           {title}
         </h2>
-        <p
-          className={`${color === 'blue' && 'text-blue'} ${
-            color === 'dark-green' && 'text-dark-green'
-          } pt-6 pl-2 pr-2`}>
-          {description}
-        </p>
+        <p className={`${textColor} pt-6 pl-2 pr-2`}>{description}</p>
       </div>
     </section>
   )
