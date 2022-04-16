@@ -1,14 +1,15 @@
 import React from 'react'
+import propTypes from 'prop-types'
 import { useState } from 'react'
-import menuIcon from '../../images/icons/icon-hamburger.svg'
+import IconHamburger from '../../images/icons/IconHamburger'
 import { navItems } from '../../utils/data'
 
-const MenuMobile = () => {
+const MenuMobile = ({ scroll }) => {
   const [toggleMenu, setToggleMenu] = useState(false)
   return (
     <div className='relative'>
       <button onClick={() => setToggleMenu((prevToggle) => !prevToggle)}>
-        <img src={menuIcon} alt='mobile menu' />
+        <IconHamburger color={scroll ? '#2c7566' : '#fff'} />
       </button>
 
       {toggleMenu ? (
@@ -29,3 +30,7 @@ const MenuMobile = () => {
 }
 
 export default MenuMobile
+
+MenuMobile.propTypes = {
+  scroll: propTypes.bool,
+}

@@ -1,11 +1,13 @@
 import React from 'react'
 import { navItems } from '../../utils/data'
-
-const MenuDesktop = () => {
+import propTypes from 'prop-types'
+const MenuDesktop = ({ scroll }) => {
   return (
     <ul className='flex gap-10 items-center'>
       {navItems.map((item) => (
-        <li key={`header-menu-item-${item}`} className='text-xs text-white'>
+        <li
+          key={`header-menu-item-${item}`}
+          className={`text-xs ${scroll ? 'text-green' : 'text-white'}`}>
           <a href='#'>{item}</a>
         </li>
       ))}
@@ -18,3 +20,7 @@ const MenuDesktop = () => {
 }
 
 export default MenuDesktop
+
+MenuDesktop.propTypes = {
+  scroll: propTypes.bool,
+}
