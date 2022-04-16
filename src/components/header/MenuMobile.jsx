@@ -9,6 +9,7 @@ const MenuMobile = ({ scroll }) => {
   return (
     <div className='relative'>
       <button onClick={() => setToggleMenu((prevToggle) => !prevToggle)}>
+        <span className='sr-only'>Toggle Mobile Menu</span>
         <IconHamburger color={scroll ? '#2c7566' : '#fff'} />
       </button>
 
