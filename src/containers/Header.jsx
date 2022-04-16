@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-
 import '../components/header/header.css'
 import Logo from '../images/Logo'
 import HeaderNav from '../components/header/HeaderNav'
+
 const Header = () => {
   const [scroll, setScroll] = useState(false)
 

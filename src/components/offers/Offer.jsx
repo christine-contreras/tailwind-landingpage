@@ -29,10 +29,17 @@ const Offer = ({ section }) => {
 
       <div className='text-center col-span-full row-start-3 row-span-2 xl:col-start-2 xl:col-span-3 xl:row-start-4 xl:row-span-2'>
         <h2
-          className={`font-serif text-3xl text-${color} xl:max-w-[22rem] font-black m-auto`}>
+          className={`font-serif text-3xl xl:max-w-[22rem] font-black m-auto ${
+            color === 'blue' && 'text-blue'
+          } ${color === 'dark-green' && 'text-dark-green'}`}>
           {title}
         </h2>
-        <p className={`text-${color} pt-6 pl-2 pr-2`}>{description}</p>
+        <p
+          className={`${color === 'blue' && 'text-blue'} ${
+            color === 'dark-green' && 'text-dark-green'
+          } pt-6 pl-2 pr-2`}>
+          {description}
+        </p>
       </div>
     </section>
   )
